@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-frosapyf
+  janus-idp.io/tekton: go-frosapyf
+  backstage.io/kubernetes-id: go-frosapyf
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-frosapyf
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
